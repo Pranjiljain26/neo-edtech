@@ -7,9 +7,11 @@ def home_page():
 
     # Add Connect Wallet button
     if st.button("Connect Wallet"):
-        # Redirect to the NEO website when button is clicked
+        # Open NEO website in a new tab
         st.markdown(
-            '<meta http-equiv="refresh" content="0;url=https://neo.org/" />',
+            '<a href="https://neo.org/" target="_blank">'
+            + "<button>Connect to NEO Wallet</button>"
+            + "</a>",
             unsafe_allow_html=True,
         )
 
