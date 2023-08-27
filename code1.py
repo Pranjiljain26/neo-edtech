@@ -4,6 +4,10 @@ import streamlit as st
 # Page functions
 def home_page():
     st.write("Welcome to the Home Page!")
+
+    # Add Connect Wallet button
+    st.button("Connect Wallet", key="connect_wallet", help="Connect your NEO wallet")
+
     st.write("## NEON3 for Beginners")
     st.video("https://www.youtube.com/watch?v=I_vCOzEbSMI")
 
@@ -153,7 +157,11 @@ def certification_page():
 def main():
     st.title("Navigation App")
 
-    menu = ["Home", "Courses", "Certification"]
+    menu = [
+        "Home",
+        "Courses",
+        "Certification",
+    ]
     choice = st.sidebar.selectbox("Select a page", menu)
 
     if choice == "Home":
