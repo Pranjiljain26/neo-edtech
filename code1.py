@@ -6,14 +6,14 @@ def home_page():
     st.write("Welcome to the Home Page!")
 
     # Add Connect Wallet button
-
-
-if st.button("Connect Wallet"):
-    # Redirect to NEO website in a new tab
-    st.markdown(
-        '<script>window.open("https://neo.org/", "_blank");</script>',
-        unsafe_allow_html=True,
-    )
+    if st.button("Connect Wallet"):
+        # Open NEO website in a new tab
+        st.markdown(
+            '<a href="https://neo.org/" target="_blank">'
+            + "<button>Connect to NEO Wallet</button>"
+            + "</a>",
+            unsafe_allow_html=True,
+        )
 
     st.write("## NEON3 for Beginners")
     st.video("https://www.youtube.com/watch?v=I_vCOzEbSMI")
