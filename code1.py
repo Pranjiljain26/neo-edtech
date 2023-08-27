@@ -6,7 +6,12 @@ def home_page():
     st.write("Welcome to the Home Page!")
 
     # Add Connect Wallet button
-    st.button("Connect Wallet", key="connect_wallet", help="Connect your NEO wallet")
+    if st.button("Connect Wallet"):
+        # Redirect to the NEO website when button is clicked
+        st.markdown(
+            '<meta http-equiv="refresh" content="0;url=https://neo.org/" />',
+            unsafe_allow_html=True,
+        )
 
     st.write("## NEON3 for Beginners")
     st.video("https://www.youtube.com/watch?v=I_vCOzEbSMI")
